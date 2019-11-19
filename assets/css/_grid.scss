@@ -1,13 +1,10 @@
-//
-// -- Start editing -- //
-//
 
-@import "sass-flex-mixin/_flex";
+@import "_flex";
 
 // Set the number of columns you want to use on your layout.
 $flexboxgrid-grid-columns: 12 !default;
 // Set the gutter between columns.
-$flexboxgrid-gutter-width: 1rem !default;
+$flexboxgrid-gutter-width: 0 !default;
 // Set a margin for the container sides.
 $flexboxgrid-outer-margin: 0 !default;
 // Create or remove breakpoints for your project
@@ -59,7 +56,7 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
 
 @mixin flexboxgrid-sass-col-common {
   box-sizing: border-box;
-  
+
   // split @include flex(0, 0, auto) into individual props
   @include flex-grow(0);
   @include flex-shrink(0);
@@ -73,19 +70,19 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
 }
 
 $name: xs;
-.col-#{$name} {
+.#{$name} {
   @include flexboxgrid-sass-col-common;
   @include flex-basis(auto);
 }
 @for $i from 1 through $flexboxgrid-grid-columns {
-  .col-#{$name}-#{$i} {
+  .#{$name}-#{$i} {
     @include flexboxgrid-sass-col-common;
     @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
     max-width: 100% / $flexboxgrid-grid-columns * $i;
   }
 }
 @for $i from 0 through $flexboxgrid-grid-columns {
-  .col-#{$name}-offset-#{$i} {
+  .#{$name}-offset-#{$i} {
     @include flexboxgrid-sass-col-common;
     @if $i == 0 {
       margin-left: 0;
@@ -94,7 +91,7 @@ $name: xs;
     }
   }
 }
-.col-#{$name} {
+.#{$name} {
   @include flex-grow(1);
   @include flex-basis(0);
   max-width: 100%;
@@ -106,7 +103,6 @@ $name: xs;
 
 .center-#{$name} {
   @include justify-content(center);
-  text-align: center;
 }
 
 .end-#{$name} {
@@ -154,19 +150,19 @@ $name: xs;
       width: $container;
     }
 
-    .col-#{$name} {
+    .#{$name} {
       @include flexboxgrid-sass-col-common;
       @include flex-basis(auto);
     }
     @for $i from 1 through $flexboxgrid-grid-columns {
-      .col-#{$name}-#{$i} {
+      .#{$name}-#{$i} {
         @include flexboxgrid-sass-col-common;
         @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
         max-width: 100% / $flexboxgrid-grid-columns * $i;
       }
     }
     @for $i from 0 through $flexboxgrid-grid-columns {
-      .col-#{$name}-offset-#{$i} {
+      .#{$name}-offset-#{$i} {
         @include flexboxgrid-sass-col-common;
         @if $i == 0 {
           margin-left: 0;
@@ -175,7 +171,7 @@ $name: xs;
         }
       }
     }
-    .col-#{$name} {
+    .#{$name} {
       @include flex-grow(1);
       @include flex-basis(0);
       max-width: 100%;
@@ -184,10 +180,8 @@ $name: xs;
       @include justify-content(flex-start);
       text-align: left;
     }
-
     .center-#{$name} {
       @include justify-content(center);
-      text-align: center;
     }
 
     .end-#{$name} {
@@ -198,7 +192,7 @@ $name: xs;
     .top {
       @include align-items(flex-start);
     }
-    
+
     .top-#{$name} {
       @include align-items(flex-start);
     }
@@ -206,19 +200,15 @@ $name: xs;
     .middle {
       @include align-items(center);
     }
-    
     .middle-#{$name} {
       @include align-items(center);
     }
-
     .bottom-#{$name} {
       @include align-items(flex-end);
     }
-    
     .bottom {
       @include align-items(flex-end);
     }
-
     .around-#{$name} {
       @include justify-content(space-around);
     }
@@ -234,7 +224,7 @@ $name: xs;
     .last-#{$name} {
       order: 1;
     }
-    
+
     .hide-on-#{$name} {
       display: none;
     }

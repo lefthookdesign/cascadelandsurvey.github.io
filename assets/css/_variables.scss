@@ -5,22 +5,23 @@ $fonts: aglet-slab, sans-serif;;
 $global-radius: 2px;
 
 //sizes
-$xs: 10px;
-$sm: 20px;
-$md: 40px;
-$lg: 70px;
-$xl: 120px;
+$xs: 13px;
+$sm: 26px;
+$md: 60px;
+$lg: 120px;
+$xl: 200px;
 
 // colors
 $primary: #3F4B59;
 $secondary: #324034;
 $accent: #EFB834;
+$grey: #868C93;
 $light-grey: #EDF1F5;
 $white: #fff;
 $black: #020000;
 
 //shadows
 $none: none;
-$shadow-light: 0px 2px 5px rgba($black-color, 0.1);
-$shadow: 0px 4px 8px rgba($black-color, 0.25);
-$shadow-dark: 0px 20px 25px rgba($black-color,0.4);
+$shadow-light: 0px 2px 5px rgba($black, 0.1);
+$shadow: 0px 4px 8px rgba($black, 0.25);
+$shadow-dark: 0px 20px 25px rgba($black,0.4);
