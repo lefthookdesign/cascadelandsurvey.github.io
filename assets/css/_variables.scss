@@ -1,11 +1,13 @@
-// fonts
-$fonts: aglet-slab, sans-serif;;
+@import url("https://use.typekit.net/uob7ugr.css");
+ //fonts
+$fonts: aglet-slab, sans-serif;
+$secondary-font: museo-slab, serif;
 
 // radius
 $global-radius: 2px;
 
 //sizes
-$xs: 13px;
+$xs: 15px;
 $sm: 26px;
 $md: 60px;
 $lg: 120px;
@@ -16,7 +18,7 @@ $primary: #3F4B59;
 $secondary: #324034;
 $accent: #EFB834;
 $grey: #868C93;
-$light-grey: #EDF1F5;
+$light-grey: #F0F4F7;
 $white: #fff;
 $black: #020000;
 

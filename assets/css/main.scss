@@ -198,10 +198,37 @@ p {
 }
 .header-link {
   color: $white;
+  font-family: $secondary-font;
+  font-weight: 700;
 }
 .header-link:hover {
   color: $accent;
 }
+.header-link.active {
+  color: #C7992D !important;
+}
+.header-link.active::after {
+  @include transition;
+  content: '';
+  display: block;
+  position: relative;
+  top: 5px;
+  height: 2px;
+  width: 100%;
+  background: $accent;
+}
+.header-link::after {
+  @include transition;
+  content: '';
+  display: block;
+  position: relative;
+  top: 5px;
+  width: 0;
+  height: 2px;
+  background: $accent;
+  transition: width .2s ease-in-out;
+}
+
 .scrolled{
   @include transition;
   background: $white;
@@ -213,7 +240,7 @@ p {
     display: none !important;
   }
   .header-link {
-    color: $primary;
+    color: $secondary;
   }
   .header-link:hover {
     color: $accent;
@@ -222,9 +249,15 @@ p {
 
 /* footer */
 .footer{
-  background: $light-grey;
+  background: $primary;
   padding: $xl 0;
   color: $grey;
+  p {
+    font-size: .8em;
+    color: $light-grey;
+    opacity: .8;
+    letter-spacing: .02em;
+  }
 }
 .footer-logo {
   width: 60px;
@@ -254,35 +287,59 @@ i.sm-icon {
     font-size: 22px !important;}
 
 /* inputs */
+input {
+  font-size: 20px;
+  color: $black;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: none;
+}
+textarea {
+  font-size: 20px;
+  color: $black;
+  width: 100%;
+  min-height: 300px;
+  border: none;
+  padding: 10px 15px;
+  resize: none;
+}
+input:focus, textarea:focus {
+  outline: 2px solid $accent;
+  outline-offset: 0px;
+}
+input::placeholder, textarea::placeholder {
+  color: $grey;
+}
 
 /* buttons */
 .button {
     @include transition;
     @include no-shadow;
-    background: #FFC437;
-    color: $black;
+    min-width: 180px;
+    background: #F7BE35;
+    color: $secondary;
     padding: $xs $sm;
     position:relative;
     border: none;
     top:0;
     cursor: pointer;
-    font-weight: 500;
     font-size: 13px;
-    letter-spacing: .05em;
+    letter-spacing: .095em;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
     text-align: center !important;
-    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+    font-family: $secondary-font;
+    font-weight: 700;
 }
 .button:hover{
     @include shadow-light;
     @include transition;
+    color: $black;
     background: $accent;
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    transform: perspective(15cm) rotateX(-2deg) rotateY(5deg);
 }
 
 /* misc styles */
