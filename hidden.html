@@ -149,7 +149,7 @@
           <h2 class="sm-padding">Contact Us</h2>
           <h5 class="sm-padding no-top-padding grey-color">Send us an email below, or call us at <a href="tel:1-530-459-0825">530-459-0825.</a></h5>
           <div class="sm-padding">
-            <form action="https://formspree.io/mrggdqvk" method="post">
+            <form action="https://formspree.io/mrggdqvk" method="post" onsubmit="target_popup(this)">
               <input type="text" name="Name" placeholder="Enter your name"  />
               <input type="email" name="Email" placeholder="example@email.com"  />
               <textarea name="Message" placeholder="What can we help you with?"></textarea>
@@ -177,6 +177,12 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    function target_popup(form) {
+      window.open('', 'formpopup', 'width=400,height=400,resizeable,scrollbars');
+      form.target = 'formpopup';
+    }
+    </script>
     <script>
       AOS.init({
         delay: 0,
