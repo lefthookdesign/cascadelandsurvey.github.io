@@ -2905,7 +2905,7 @@ p {
   position: fixed;
   z-index: 10;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
 }
 
 .header-logo, .header-logo-dark {
