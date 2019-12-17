@@ -557,6 +557,7 @@ table {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
+  text-align: center;
 }
 
 .end-xs {
@@ -2866,7 +2867,13 @@ h5 {
 }
 
 p {
+  font-size: 18px;
   font-weight: 400;
+}
+
+.label {
+  opacity: 0.5;
+  padding-right: 15px;
 }
 
 .sm-text {
@@ -2898,7 +2905,7 @@ p {
 }
 
 /* navigation */
-.header {
+.header, .header-mobile {
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   background: none;
@@ -2906,6 +2913,9 @@ p {
   z-index: 10;
   width: 100%;
   padding: 10px;
+}
+.header i, .header-mobile i {
+  font-size: 34px;
 }
 
 .header-logo, .header-logo-dark {
@@ -2964,10 +2974,10 @@ p {
   -ms-box-shadow: 0px 2px 5px rgba(2, 0, 0, 0.1);
   box-shadow: 0px 2px 5px rgba(2, 0, 0, 0.1);
 }
-.scrolled .header-logo-dark {
+.scrolled .header-logo-dark, .scrolled .menu-icon-dark {
   display: block !important;
 }
-.scrolled .header-logo {
+.scrolled .header-logo, .scrolled .menu-icon {
   display: none !important;
 }
 .scrolled .header-link {
@@ -2975,6 +2985,63 @@ p {
 }
 .scrolled .header-link:hover {
   color: #EFB834;
+}
+
+.show-menu {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  opacity: 1 !important;
+  transform: translateX(0px) scale(1) !important;
+}
+
+#menu-list {
+  position: absolute;
+  min-height: 100vh;
+  width: 25%;
+  min-width: 300px;
+  max-width: 500px;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-box-shadow: 0px 4px 8px rgba(2, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 8px rgba(2, 0, 0, 0.25);
+  -ms-box-shadow: 0px 4px 8px rgba(2, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px rgba(2, 0, 0, 0.25);
+  transform: translateX(-300px) scale(1.25);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background: rgba(63, 75, 89, 0.97);
+}
+#menu-list .menu-link {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.75em;
+}
+#menu-list .menu-link.active {
+  color: #EFB834 !important;
+}
+#menu-list .menu-link.active::after {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  content: "";
+  display: block;
+  position: relative;
+  top: 5px;
+  height: 2px;
+  width: 100%;
+  background: #EFB834;
+}
+#menu-list .menu-link::after {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  content: "";
+  display: block;
+  position: relative;
+  top: 5px;
+  width: 0;
+  height: 2px;
+  background: #EFB834;
+  transition: width 0.2s ease-in-out;
 }
 
 /* footer */
@@ -3093,7 +3160,7 @@ input::placeholder, textarea::placeholder {
 
 /* misc styles */
 i.large {
-  font-size: 64px;
+  font-size: 60px;
 }
 
 .absolute {
@@ -3247,7 +3314,7 @@ i.large {
 }
 
 .lg-padding {
-  padding: 120px;
+  padding: 140px;
 }
 
 .xl-padding {
@@ -3303,19 +3370,19 @@ i.large {
 }
 
 .lg-top-margin {
-  margin-top: 120px;
+  margin-top: 140px;
 }
 
 .lg-right-margin {
-  margin-right: 120px;
+  margin-right: 140px;
 }
 
 .lg-bottom-margin {
-  margin-bottom: 120px;
+  margin-bottom: 140px;
 }
 
 .lg-left-margin {
-  margin-left: 120px;
+  margin-left: 140px;
 }
 
 .xl-top-margin {
@@ -3339,6 +3406,12 @@ i.large {
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+.background-image-right {
+  background-size: 70%;
+  background-position: top right;
   background-repeat: no-repeat;
 }
 
@@ -3399,7 +3472,7 @@ i.large {
   display: none !important;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 760px) {
   .first-on-mobile {
     order: -1;
   }
@@ -3473,23 +3546,23 @@ i.large {
   }
 
   .lg-padding {
-    padding: 80px;
+    padding: 93.3333333333px;
   }
 
   .lg-top-margin {
-    margin-top: 80px;
+    margin-top: 93.3333333333px;
   }
 
   .lg-right-margin {
-    margin-right: 80px;
+    margin-right: 93.3333333333px;
   }
 
   .lg-bottom-margin {
-    margin-bottom: 80px;
+    margin-bottom: 93.3333333333px;
   }
 
   .lg-left-margin {
-    margin-left: 80px;
+    margin-left: 93.3333333333px;
   }
 
   .xl-padding {
@@ -3510,6 +3583,55 @@ i.large {
 
   .xl-left-margin {
     margin-left: 133.3333333333px;
+  }
+
+  /* text and headers */
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 500;
+    color: #3F4B59;
+  }
+
+  h1 {
+    font-size: 2.89em;
+    line-height: 1.3em;
+  }
+
+  h2 {
+    font-size: 2.89em;
+  }
+
+  h3 {
+    font-size: 1.89em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  h5 {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .footer h5 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+
+  .background-image-right {
+    background-size: 500px;
+    background-position: top right -50vw;
+    background-repeat: no-repeat;
   }
 }
 @media only screen and (min-width: 1900px) {

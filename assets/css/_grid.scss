@@ -103,6 +103,7 @@ $name: xs;
 
 .center-#{$name} {
   @include justify-content(center);
+  text-align: center;
 }
 
 .end-#{$name} {

@@ -157,7 +157,12 @@ h5 {
   font-weight: 400;
 }
 p {
+  font-size: 18px;
   font-weight: 400;
+}
+.label {
+  opacity: .5;
+  padding-right: $xs;
 }
 .sm-text {
   font-size: 0.75em;
@@ -182,13 +187,16 @@ p {
 }
 
 /* navigation */
-.header {
+.header, .header-mobile {
   @include transition;
   background: none;
   position: fixed;
   z-index: 10;
   width: 100%;
   padding: 10px;
+  i {
+    font-size: 34px;
+  }
 }
 .header-logo, .header-logo-dark {
   width: 60px;
@@ -228,15 +236,14 @@ p {
   background: $accent;
   transition: width .2s ease-in-out;
 }
-
 .scrolled{
   @include transition;
   background: $white;
   @include shadow-light;
-  .header-logo-dark{
+  .header-logo-dark, .menu-icon-dark {
     display: block !important;
   }
-  .header-logo {
+  .header-logo, .menu-icon {
     display: none !important;
   }
   .header-link {
@@ -244,6 +251,54 @@ p {
   }
   .header-link:hover {
     color: $accent;
+  }
+}
+.show-menu {
+  @include transition;
+  opacity: 1 !important;
+  transform: translateX(0px) scale(1) !important;
+}
+#menu-list {
+  position: absolute;
+  min-height: 100vh;
+  width: 25%;
+  min-width: 300px;
+  max-width: 500px;
+  @include transition;
+  @include shadow;
+  transform: translateX(-300px) scale(1.25);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background: rgba($primary, 0.97);
+  .menu-link {
+    color: $white;
+    font-weight: 700;
+    font-size: 1.75em;
+  }
+  .menu-link.active {
+    color: $accent !important;
+  }
+  .menu-link.active::after {
+    @include transition;
+    content: '';
+    display: block;
+    position: relative;
+    top: 5px;
+    height: 2px;
+    width: 100%;
+    background: $accent;
+  }
+  .menu-link::after {
+    @include transition;
+    content: '';
+    display: block;
+    position: relative;
+    top: 5px;
+    width: 0;
+    height: 2px;
+    background: $accent;
+    transition: width .2s ease-in-out;
   }
 }
 
@@ -344,7 +399,7 @@ input::placeholder, textarea::placeholder {
 
 /* misc styles */
 i.large {
-  font-size: 64px;
+  font-size: 60px;
 }
 .absolute{
   display: block !important;
@@ -529,6 +584,11 @@ i.large {
   background-attachment: scroll;
   background-repeat: no-repeat;
 }
+.background-image-right {
+  background-size: 70%;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
 .angle-top {
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
@@ -574,7 +634,7 @@ i.large {
   display: none !important;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 760px) {
   .first-on-mobile {
     order: -1;
   }
@@ -658,6 +718,46 @@ i.large {
   }
   .xl-left-margin{
     margin-left: $xl / 1.5;
+  }
+  /* text and headers */
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 500;
+    color: $primary;
+  }
+  h1 {
+    font-size: 2.89em;
+    line-height: 1.3em;
+    }
+  h2 {
+    font-size: 2.89em;
+  }
+  h3 {
+    font-size: 1.89em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .footer {
+    padding-top: $xl / 2;
+    padding-bottom: $xl / 2;
+    h5 {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+  }
+  .background-image-right {
+    background-size: 500px;
+    background-position: top right -50vw;
+    background-repeat: no-repeat;
   }
 }
 @media only screen and (max-width: 1200px) {
