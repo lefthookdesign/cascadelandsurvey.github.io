@@ -2871,6 +2871,18 @@ p {
   font-weight: 400;
 }
 
+label {
+  position: relative;
+  top: 26px;
+  font-size: 0.5em;
+  font-family: museo-slab, serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #868C93;
+  padding: 0px 20px 7px 20px;
+}
+
 .label {
   opacity: 0.5;
   padding-right: 15px;
@@ -3047,18 +3059,23 @@ p {
 /* footer */
 .footer {
   background: #3F4B59;
-  padding: 200px 0;
+  padding: 200px 0 26px 0;
   color: #868C93;
 }
 .footer p {
-  font-size: 0.8em;
+  font-size: 0.8em !important;
+  color: #F0F4F7;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+.footer h6 {
   color: #F0F4F7;
   opacity: 0.8;
   letter-spacing: 0.02em;
 }
 
 .footer-logo {
-  width: 60px;
+  width: 70px;
   opacity: 0.5;
 }
 
@@ -3095,8 +3112,7 @@ input {
   font-size: 20px;
   color: #020000;
   width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 15px;
+  padding: 28px 20px 13px 20px;
   border: none;
 }
 
@@ -3106,7 +3122,7 @@ textarea {
   width: 100%;
   min-height: 300px;
   border: none;
-  padding: 10px 15px;
+  padding: 28px 20px 13px 20px;
   resize: none;
 }
 

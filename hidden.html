@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Cascade Land Survey | Surveying Siskiyou County since 1996</title>
     <!-- main -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon@32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon@16.png">
@@ -141,7 +141,7 @@
               <h5 class="xs-padding no-left-padding grey-color">Control Surveys</h5>
             </div>
             <div class="xs-12 sm-6 sm-padding">
-              <img class="full-width sm-padding" src="/assets/images/gps-vr-equipment.jpg"/>
+              <img class="full-width sm-padding" alt="GPS surveying equipment on a tri-pod." src="/assets/images/gps-vr-equipment.jpg"/>
             </div>
           </div>
         </div>
@@ -153,12 +153,15 @@
       <div class="sm-max-width">
         <div class="xl-padding no-left-padding no-right-padding">
           <h2 class="sm-padding">Contact</h2>
-          <h5 class="sm-padding no-top-padding grey-color">Send us an email below, or call us at <a href="tel:1-530-340-0077">530-340-0077.</a></h5>
-          <div class="sm-padding">
+          <h5 class="sm-padding no-top-padding grey-color">Send us an email below, or call us at <a href="tel:1-530-340-0077">530-340-0077</a></h5>
+          <div class="sm-padding no-top-padding">
             <form action="https://formspree.io/mrggdqvk" method="post" onsubmit="target_popup(this)">
+              <label>Name</label>
               <input type="text" name="Name" placeholder="Enter your name"  />
+              <label>Email</label>
               <input type="email" name="Email" placeholder="Enter your email"  />
-              <textarea name="Message" placeholder="What can we help you with?"></textarea>
+              <label>Message</label>
+              <textarea name="Email message" placeholder="What can we help you with?"></textarea>
               <button class="button sm-top-margin" type="submit">Send Email</button>
             </form>
           </div>
@@ -166,24 +169,31 @@
       </div>
     </div>
   </div>
-    <div class="footer angle-top" style="position: relative; margin-top: -9%;">
+    <div id="footer" class="footer angle-top" style="position: relative; margin-top: -9%;">
       <div class="max-width">
-        <div class="row bottom-xs sm-padding">
+        <div class="row middle-xs sm-padding">
           <div class="xs-12 sm-1 sm-text center-xs start-sm">
-            <img class="footer-logo" src="assets/images/logo-2.png"/>
+            <img class="footer-logo" alt="Cascade Land Survey logo icon in white" src="assets/images/logo-2.png"/>
           </div>
           <div class="xs-12 sm-5 sm-text center-xs start-sm">
-            <h5 class="bold white-color xs-padding opacity">Cascade Land Survey</h5>
-          </div>
-          <div class="xs-12 sm-6 center-xs end-sm">
+            <h6 class="bold">Cascade Land Survey</h6>
             <p class="bold">
               Daniel Wallace
             </p>
             <p class="">
               11239 Ball Mountain Little Shasta Rd, Montague, CA 96064
             </p>
-            <p class="">
-              <span class="bold">License:  </span>California PLS 6874, Oregon LS 2775, Nevada LS 10847
+          </div>
+          <div class="xs-12 sm-6 center-xs end-sm">
+            <h5 class="bold white-color xs-padding opacity">Call us for an estimate!</h5>
+            <div class="row middle-xs end-sm">
+              <i class="material-icons white-color opacity inline">phone</i>
+              <h6 class="bold white-color xs-padding no-top-padding no-bottom-padding opacity inline"><a href="tel:1-530-340-0077" style="color: #fff;">530-340-0077</a></h6>
+            </div>
+          </div>
+          <div class="xs-12 center-xs sm-text xs-padding md-top-margin">
+            <p class="grey-color">
+              Licensed in: California PLS 6874, Oregon LS 2775, Nevada LS 10847
             </p>
           </div>
         </div>
@@ -283,6 +293,6 @@
         });
     }
     </script>
-    
+
   </body>
 </html>

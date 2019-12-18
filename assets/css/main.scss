@@ -160,6 +160,17 @@ p {
   font-size: 18px;
   font-weight: 400;
 }
+label {
+  position: relative;
+  top: 26px;
+  font-size: .5em;
+  font-family: $secondary-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: $grey;
+  padding: 0px 20px 7px 20px;
+}
 .label {
   opacity: .5;
   padding-right: $xs;
@@ -305,17 +316,22 @@ p {
 /* footer */
 .footer{
   background: $primary;
-  padding: $xl 0;
+  padding: $xl 0 $sm 0;
   color: $grey;
   p {
-    font-size: .8em;
+    font-size: .8em !important;
+    color: $light-grey;
+    opacity: .8;
+    letter-spacing: .02em;
+  }
+  h6 {
     color: $light-grey;
     opacity: .8;
     letter-spacing: .02em;
   }
 }
 .footer-logo {
-  width: 60px;
+  width: 70px;
   opacity: 0.5;
 }
 
@@ -346,8 +362,7 @@ input {
   font-size: 20px;
   color: $black;
   width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 15px;
+  padding: 28px 20px 13px 20px;
   border: none;
 }
 textarea {
@@ -356,7 +371,7 @@ textarea {
   width: 100%;
   min-height: 300px;
   border: none;
-  padding: 10px 15px;
+  padding: 28px 20px 13px 20px;
   resize: none;
 }
 input:focus, textarea:focus {
@@ -746,6 +761,7 @@ i.large {
     font-weight: 400;
     font-size: 16px;
   }
+
   .footer {
     padding-top: $xl / 2;
     padding-bottom: $xl / 2;
