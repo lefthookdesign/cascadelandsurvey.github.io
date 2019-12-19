@@ -70,8 +70,8 @@ body {
   font-size: 18px;
   line-height: 1.5;
   color: $black;
-  min-height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased !important;
@@ -119,6 +119,13 @@ body {
 .grey-background{
     background:$grey;
 }
+.dark-grey-color{
+    color:$dark-grey;
+    fill: $dark-grey;
+}
+.dark-grey-background{
+    background:$dark-grey;
+}
 .black-color{
     color:$black;
     fill: $black;
@@ -159,6 +166,9 @@ h5 {
 p {
   font-size: 18px;
   font-weight: 400;
+}
+#about-info p{
+  font-size: 14px;
 }
 label {
   position: relative;
@@ -203,7 +213,7 @@ label {
   background: none;
   position: fixed;
   z-index: 10;
-  width: 100%;
+  width: 100vw;
   padding: 10px;
   i {
     font-size: 34px;
@@ -414,7 +424,7 @@ input::placeholder, textarea::placeholder {
 
 /* misc styles */
 i.large {
-  font-size: 60px;
+  font-size: 36px;
 }
 .absolute{
   display: block !important;
@@ -603,6 +613,12 @@ i.large {
   background-size: 70%;
   background-position: top right;
   background-repeat: no-repeat;
+}
+#about-table div.xs-12:nth-child(odd) {
+  padding: $xs $xs $xs $sm;
+}
+#about-table div.xs-12:nth-child(even) {
+  padding: $xs $sm $xs 5px;
 }
 .angle-top {
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);

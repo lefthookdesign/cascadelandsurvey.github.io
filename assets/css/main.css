@@ -2760,8 +2760,8 @@ body {
   font-size: 18px;
   line-height: 1.5;
   color: #020000;
-  min-height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased !important;
@@ -2820,6 +2820,15 @@ body img::before, body img::after {
   background: #868C93;
 }
 
+.dark-grey-color {
+  color: #60656A;
+  fill: #60656A;
+}
+
+.dark-grey-background {
+  background: #60656A;
+}
+
 .black-color {
   color: #020000;
   fill: #020000;
@@ -2869,6 +2878,10 @@ h5 {
 p {
   font-size: 18px;
   font-weight: 400;
+}
+
+#about-info p {
+  font-size: 14px;
 }
 
 label {
@@ -2923,7 +2936,7 @@ label {
   background: none;
   position: fixed;
   z-index: 10;
-  width: 100%;
+  width: 100vw;
   padding: 10px;
 }
 .header i, .header-mobile i {
@@ -3176,7 +3189,7 @@ input::placeholder, textarea::placeholder {
 
 /* misc styles */
 i.large {
-  font-size: 60px;
+  font-size: 36px;
 }
 
 .absolute {
@@ -3429,6 +3442,14 @@ i.large {
   background-size: 70%;
   background-position: top right;
   background-repeat: no-repeat;
+}
+
+#about-table div.xs-12:nth-child(odd) {
+  padding: 15px 15px 15px 26px;
+}
+
+#about-table div.xs-12:nth-child(even) {
+  padding: 15px 26px 15px 5px;
 }
 
 .angle-top {
