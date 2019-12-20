@@ -2812,12 +2812,12 @@ body img::before, body img::after {
 }
 
 .grey-color {
-  color: #868C93;
-  fill: #868C93;
+  color: #82888F;
+  fill: #82888F;
 }
 
 .grey-background {
-  background: #868C93;
+  background: #82888F;
 }
 
 .dark-grey-color {
@@ -2892,12 +2892,12 @@ label {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #868C93;
+  color: #82888F;
   padding: 0px 20px 7px 20px;
 }
 
 .label {
-  opacity: 0.5;
+  opacity: 0.6;
   padding-right: 15px;
 }
 
@@ -3073,7 +3073,7 @@ label {
 .footer {
   background: #3F4B59;
   padding: 200px 0 26px 0;
-  color: #868C93;
+  color: #82888F;
 }
 .footer p {
   font-size: 0.8em !important;
@@ -3145,7 +3145,7 @@ input:focus, textarea:focus {
 }
 
 input::placeholder, textarea::placeholder {
-  color: #868C93;
+  color: #82888F;
 }
 
 /* buttons */
@@ -3226,7 +3226,7 @@ i.large {
 }
 
 .opacity {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .border {
