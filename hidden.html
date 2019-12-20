@@ -162,12 +162,12 @@
           <h5 class="sm-padding no-top-padding grey-color">Send us an email below, or call us at <a href="tel:1-530-340-0077">530-340-0077</a></h5>
           <div class="sm-padding no-top-padding">
             <form action="https://formspree.io/mrggdqvk" method="post" onsubmit="target_popup(this)">
-              <label>Name</label>
-              <input type="text" name="Name" placeholder="Enter your name"  />
-              <label>Email</label>
-              <input type="email" name="Email" placeholder="Enter your email"  />
-              <label>Message</label>
-              <textarea name="Email message" placeholder="What can we help you with?"></textarea>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="Name" placeholder="Enter your name"  />
+              <label for="email">Email</label>
+              <input id="email" type="email" name="Email" placeholder="Enter your email"  />
+              <label for="message">Message</label>
+              <textarea id="message" name="Email message" placeholder="What can we help you with?"></textarea>
               <button class="button sm-top-margin" type="submit">Send Email</button>
             </form>
           </div>
