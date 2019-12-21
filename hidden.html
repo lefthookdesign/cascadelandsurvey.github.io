@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <title>Cascade Land Survey | Surveying Siskiyou County since 1996</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PCDQM8X');</script>
     <!-- main -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="Experience surveying Siskiyou County since 1996 - helping clients make land planning decisions.">
@@ -38,6 +44,10 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCDQM8X"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="nav">
       <div id="header" class="header hide-for-small"></div>
       <div id="header-mobile" class="header-mobile show-for-small"></div>
@@ -168,7 +178,12 @@
               <input id="email" type="email" name="Email" placeholder="Enter your email"  />
               <label for="message">Message</label>
               <textarea id="message" name="Email message" placeholder="What can we help you with?"></textarea>
-              <button class="button sm-top-margin" type="submit">Send Email</button>
+              <button
+                class="button sm-top-margin"
+                type="submit"
+                onclick=”ga(‘send’, ‘event’, ‘Category’, ‘Action’, ‘Label’);”>
+                  Send Email
+              </button>
             </form>
           </div>
         </div>
