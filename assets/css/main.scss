@@ -75,6 +75,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased !important;
+  scroll-behavior: smooth;
   img {
     line-height: 0;
     vertical-align:bottom;}

@@ -2765,6 +2765,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased !important;
+  scroll-behavior: smooth;
 }
 body img {
   line-height: 0;
