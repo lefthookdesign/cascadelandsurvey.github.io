@@ -615,11 +615,8 @@ i.large {
   background-position: top right;
   background-repeat: no-repeat;
 }
-#about-table div.xs-12:nth-child(odd) {
+#about-table div.xs-12 {
   padding: $xs $xs $xs $sm;
-}
-#about-table div.xs-12:nth-child(even) {
-  padding: $xs $sm $xs 5px;
 }
 .angle-top {
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);

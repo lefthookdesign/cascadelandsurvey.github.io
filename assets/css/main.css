@@ -3445,12 +3445,8 @@ i.large {
   background-repeat: no-repeat;
 }
 
-#about-table div.xs-12:nth-child(odd) {
+#about-table div.xs-12 {
   padding: 15px 15px 15px 26px;
-}
-
-#about-table div.xs-12:nth-child(even) {
-  padding: 15px 26px 15px 5px;
 }
 
 .angle-top {
