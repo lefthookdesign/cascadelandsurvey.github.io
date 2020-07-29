@@ -2756,6 +2756,7 @@ table {
 /* global */
 body {
   font-family: aglet-slab, sans-serif;
+  font-display: swap;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
